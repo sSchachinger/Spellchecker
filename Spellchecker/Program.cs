@@ -11,7 +11,10 @@ namespace Spellchecker
     {
         static void Main(string[] args)
         {
-            libLinkedList.ILinkedList<string> linkedList = new libLinkedList.LinkedList<string>();
+
+            Controller controller = new Controller();
+            controller.Main();
+
         }
     }
 }

@@ -52,6 +52,11 @@ namespace Spellchecker
                     if (i == item.Item1)
                         _input[i] = _input[i].Insert(item.Item2, item.Item3.ToString());
                 }
+                if (i == 0)
+                {
+                            // Anfangsbuchstabe soll groß sein!!
+                      
+                }
 
                 if (CorrectedValues[i])
                     Console.Write(_input[i]);

@@ -8,11 +8,13 @@ namespace Spellchecker
 {
     public class Dictionary
     {
-        public libLinkedList.ILinkedList<string> dict { get; set; } 
+        public libLinkedList.ILinkedList<string> dictLL { get; set; }
+        public Hashtable.IlibHashtable<string, int> dictHT { get; set; }
 
         public Dictionary()
         {
-            dict = new libLinkedList.LinkedList<string>();
+            dictLL = new libLinkedList.LinkedList<string>();
+            dictHT = new Hashtable.libHashtable<string, int>();
         }
     }
     public class German : Dictionary

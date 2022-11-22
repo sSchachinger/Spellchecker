@@ -14,7 +14,7 @@ namespace Spellchecker
         {
             this.path = path;
         }
-        public libLinkedList.ILinkedList<string> readFile()
+        public libLinkedList.ILinkedList<string> readFileLL()
         {
             StreamReader sr = new StreamReader(path);
             string line;
@@ -27,6 +27,21 @@ namespace Spellchecker
             sr.Close();
             return linkedList;
         }
+        public Hashtable.IlibHashtable<string,int> readFileHT()
+        {
+            StreamReader sr = new StreamReader(path);
+            string line;
+            Hashtable.IlibHashtable<string,int> hashtable = new Hashtable.libHashtable<string,int>();
+
+            while ((line = sr.ReadLine()) != null)
+            {
+                hashtable.put(line, line.Length);
+            }
+            sr.Close();
+            return hashtable;
+        }
+
+
 
     }
 }

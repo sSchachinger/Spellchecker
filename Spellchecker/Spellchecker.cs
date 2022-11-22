@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Spellchecker
 {
-    internal class Program
+    internal class Spellchecker
     {
         static void Main(string[] args)
         {
